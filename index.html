@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dream Gardening Services</title>
+<style>
+  :root {
+    --primary-color: #2c7a2c;
+    --secondary-color: #eaf4ea;
+    --accent-color: #4caf50;
+    --text-color-dark: #2d2d2d;
+    --text-color-light: #555;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color-dark);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+  }
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    color: var(--secondary-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: var(--accent-color);
+  }
+  .hero {
+    background: url('herobac.png') center center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+  .hero h2 {
+    font-size: 3rem;
+    background: rgba(44, 122, 44, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+  }
+  main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section.services {
+    margin-bottom: 3rem;
+  }
+  section.services h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+  }
+  .service-item {
+    display: flex;
+    flex-wrap: wrap;
+    background:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+  }
+  .service-item img {
+    flex: 1 1 300px;
+    object-fit: cover;
+    height: 250px;
+    transition: transform 0.3s ease;
+  }
+  .service-item img:hover {
+    transform: scale(1.05);
+  }
+  .service-info {
+    flex: 2 1 400px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .service-info h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  .service-info p {
+    color: var(--text-color-light);
+    font-size: 1rem;
+  }
+  .price {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+  }
+  section.content-large {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    color: #444;
+  }
+  h3.subtitle {
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.3rem;
+  }
+  section.customer-satisfaction {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .testimonial {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-style: italic;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+  }
+  section.disclaimer {
+    background: #f3f3f3;
+    color: #555;
+    font-size: 0.9rem;
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  }
+  footer p {
+    margin: 0.3rem 0;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .service-item {
+      flex-direction: column;
+    }
+    .service-item img, .service-info {
+      flex: unset;
+    }
+    .service-item img {
+      height: 200px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dream Gardening Services</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy & Contact</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<div class="hero" role="img" aria-label="Beautiful lush garden with colorful flowers and trees">
+  <h2>Creating Your Dream Garden</h2>
+</div>
+
+<main>
+  <section id="about" class="content-large" aria-labelledby="about-title">
+    <h3 id="about-title">Welcome to Dream Gardening Services</h3>
+    <p>
+      At Dream Gardening Services, we believe that a beautiful garden is not just a luxury — it's an essential part of a happy and healthy lifestyle. With over 15 years of experience serving our community, we provide expert gardening and landscaping solutions tailored to your unique needs and preferences. Whether you want a simple maintenance plan, a full garden design, or specialized seasonal care, our skilled team is committed to bringing your outdoor space to life with creativity and care.
+    </p>
+    <p>
+      Our mission is to transform gardens into lush, vibrant, environmentally sustainable sanctuaries that enhance your home’s value and your quality of life. We use organic practices, native plants, and smart irrigation to ensure your garden flourishes all year round while conserving resources. Here’s why choosing Dream means the best for your garden:
+    </p>
+    <ul>
+      <li>Dedicated certified horticulturists and landscaping experts.</li>
+      <li>Personalized garden design consultations.</li>
+      <li>Environmentally friendly and organic gardening techniques.</li>
+      <li>Flexible service plans and competitive pricing.</li>
+      <li>Outstanding customer support and satisfaction guarantee.</li>
+    </ul>
+    <p>
+      Dive into our range of services below and learn how we can help you cultivate a garden oasis you’ll love returning to every day.
+    </p>
+  </section>
+
+  <section id="services" class="services" aria-labelledby="services-title">
+    <h3 id="services-title">Our Gardening Services & Pricing</h3>
+
+    <article class="service-item" aria-label="Lawn Mowing service">
+      <img src="lawn1.png" alt="Lush green lawn neatly mowed" />
+      <div class="service-info">
+        <h4>Lawn Mowing & Maintenance</h4>
+        <p>
+          Keep your lawn perfectly trimmed and healthy all season long with our expert mowing and maintenance service. We use industry-leading equipment and eco-friendly fertilizers to ensure consistent growth and vibrant green coverage. Our team will schedule weekly or bi-weekly mowing, edging, and cleanup to keep your lawn looking pristine.
+        </p>
+        <p class="price">Starting at $45 per visit</p>
+      </div>
+    </article>
+
+    <article class="service-item" aria-label="Garden Bed Design and Installation service">
+      <img src="beddes.png" alt="Beautiful garden beds with colorful flowers" />
+      <div class="service-info">
+        <h4>Garden Bed Design & Installation</h4>
+        <p>
+          Let us design and install custom garden beds featuring native plants, seasonal flowers, and organic soil amendments tailored to your outdoor style. From classic flower beds to contemporary succulent arrangements, our team ensures vibrant, healthy growth and visual harmony with your landscape.
+        </p>
+        <p class="price">From $300 per bed (materials included)</p>
+      </div>
+    </article>
+
+    <article class="service-item" aria-label="Tree and Shrub Care service">
+      <img src="prun1.png" alt="Healthy trees and trimmed shrubs" />
+      <div class="service-info">
+        <h4>Tree & Shrub Pruning and Care</h4>
+        <p>
+          Maintain the health, size, and shape of your trees and shrubs with our comprehensive pruning and care service. Our arborists will assess your greenery to remove dead or diseased branches, promote growth, and enhance natural form. We also advise on pest control and winter preparation.
+        </p>
+        <p class="price">Starting at $80 per session</p>
+      </div>
+    </article>
+
+    <article class="service-item" aria-label="Seasonal Garden Cleanup service">
+      <img src="clean1.png" alt="Garden cleaned up with leaves and debris removed" />
+      <div class="service-info">
+        <h4>Seasonal Garden Cleanup</h4>
+        <p>
+          Prepare your garden for the changing seasons with thorough cleanup of leaves, debris, dead plants, and mulch renewal. This service helps prevent pests and diseases, improves soil health, and leaves your garden neat and ready for optimal growth.
+        </p>
+        <p class="price">Starting at $150 per visit</p>
+      </div>
+    </article>
+
+    <article class="service-item" aria-label="Irrigation System Installation and Maintenance service">
+      <img src="irri1.png" alt="Garden irrigation system installed and watering" />
+      <div class="service-info">
+        <h4>Irrigation System Installation & Maintenance</h4>
+        <p>
+          Efficient watering is key to a thriving garden. We design and install smart irrigation systems that provide just the right amount of water for your plants, helping conserve water and reduce your bills. Maintenance checks and seasonal adjustments ensure your system runs smoothly year-round.
+        </p>
+        <p class="price">Starting at $500 (installation)</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="content-large" aria-labelledby="gardening-tips-title">
+    <h3 id="gardening-tips-title" class="subtitle">Expert Gardening Tips & Insights</h3>
+    <p>
+      Gardening is both a science and an art. Knowing when and how to nurture your plants can transform your outdoor space into a vibrant sanctuary. Here are some expert tips to consider throughout the year:
+    </p>
+    <h4>Spring: Planning & Planting</h4>
+    <p>
+      Spring is the season of renewal. Start by pruning dead branches, cleaning your beds, and testing your soil’s nutrient levels. Choose plants suited for your zone, and consider companion planting to naturally deter pests. Early spring planting of hardy perennials and bulbs sets a strong foundation for growth.
+    </p>
+    <h4>Summer: Watering & Pest Control</h4>
+    <p>
+      Summer’s heat calls for careful watering practices; morning irrigation helps minimize evaporation. Mulching retains moisture and protects roots. Monitor for signs of pests and diseases regularly and intervene early with organic treatments. Deadhead flowers to encourage continuous blooming.
+    </p>
+    <h4>Fall: Preparing for Winter</h4>
+    <p>
+      Fall is ideal for planting trees and shrubs as they establish roots before winter. Clean up fallen leaves to prevent disease spread but leave some leaf litter to protect beneficial insects. Rake carefully around perennials to avoid damage and apply compost or mulch as natural insulation.
+    </p>
+    <h4>Winter: Low Activity & Planning</h4>
+    <p>
+      Winter offers a much-needed rest for your garden and gardener alike. Use this time to review your garden’s successes and challenges. Plan new garden layouts or expansions, order seeds, and sharpen your tools. Houseplants and indoor gardening can provide greenery indoors during colder months.
+    </p>
+    <h4>Benefits of Organic Gardening</h4>
+    <p>
+      Using organic fertilizers and pest controls protects local ecosystems, improves soil health, and produces healthier, tastier plants. Emphasize composting, natural mulches, and integrated pest management to cultivate a garden sustainable for years to come.
+    </p>
+  </section>
+
+  <section id="customer-satisfaction" class="customer-satisfaction" aria-labelledby="satisfaction-title">
+    <h3 id="satisfaction-title">Customer Satisfaction</h3>
+    <div class="testimonial" aria-label="Customer testimonial from Jane D.">
+      <p>"Dream transformed my boring backyard into a colorful paradise! Their team was professional, punctual, and truly cared about my vision. I couldn’t be happier with the lawn care and garden beds they created."</p>
+      <p>- Jane D.</p>
+    </div>
+    <div class="testimonial" aria-label="Customer testimonial from Michael S.">
+      <p>"I appreciate the eco-friendly approach Dream uses. Their organic fertilizers and smart irrigation system have dramatically improved my garden’s health. Highly recommend their knowledgeable staff."</p>
+      <p>- Michael S.</p>
+    </div>
+    <div class="testimonial" aria-label="Customer testimonial from Sarah T.">
+      <p>"The seasonal cleanup service is worth every penny. My garden looks refreshed and well-maintained all year. The team is thorough and attentive. Great value and excellent results!"</p>
+      <p>- Sarah T.</p>
+    </div>
+    <p style="text-align:center; margin-top:1rem; font-weight:700;">
+      We guarantee your satisfaction and strive to exceed your expectations with every service.
+    </p>
+  </section>
+
+  <section id="disclaimer" class="disclaimer" aria-labelledby="disclaimer-title">
+    <h3 id="disclaimer-title">Disclaimer</h3>
+    <p>
+      Dream Gardening Services aims to provide accurate and helpful gardening information and service descriptions. However, results may vary based on location, weather, soil conditions, and individual garden circumstances. Prices are subject to change without notice and may vary based on specific project requirements and materials.
+    </p>
+    <p>
+      Customers are advised to discuss their particular needs and receive a customized quote before scheduling services. While we take every precaution to ensure safety and quality, Dream is not liable for unforeseen damages, injuries, or losses related to gardening activities or installations.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Dream Gardening Services. All rights reserved.</p>
+  <p>Phone: <a href="tel:+18662339988" style="color: #adebad; text-decoration: underline;">+1 (866) 233-9988</a> | Email: <a href="mailto:contact@Dream.com" style="color: #adebad; text-decoration: underline;">contact@Dream.com</a></p>
+  <p>Address: 239 Greene St, New York, NY 10003, USA</p>
+</footer>
+</body>
+</html>

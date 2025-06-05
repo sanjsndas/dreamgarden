@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - GreenScape Gardening Services</title>
+<style>
+  :root {
+    --primary-color: #2c7a2c;
+    --secondary-color: #eaf4ea;
+    --accent-color: #4caf50;
+    --text-color-dark: #2d2d2d;
+    --text-color-light: #555;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color-dark);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+  }
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    color: var(--secondary-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: var(--accent-color);
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  h2, h3 {
+    color: var(--primary-color);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    color: var(--text-color-light);
+    font-size: 1rem;
+  }
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color-dark);
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+  }
+  form button {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  form button:hover {
+    background-color: #3a8a3a;
+  }
+  .contact-info {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+  }
+  .contact-info h3 {
+    margin-top: 0;
+  }
+  .contact-info p {
+    margin: 0.4rem 0;
+  }
+  .hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color-light);
+  }
+  .hours-list li {
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 600px) {
+    main {
+      max-width: 95%;
+      margin: 1rem auto 4rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>GreenScape Gardening Services</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy & Contact</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="contact.html" aria-current="page">Contact Us</a>
+  </nav>
+</header>
+
+<main role="main" aria-label="Contact GreenScape Gardening Services">
+  <h2>Contact Us</h2>
+
+  <p>
+    We’d love to hear from you! Whether you’re interested in our gardening services, have questions about your garden, or want to discuss a custom project, our friendly and knowledgeable team is here to help. Reach out anytime and we’ll respond as quickly as possible.
+  </p>
+
+  <p>
+    At GreenScape Gardening Services, customer satisfaction is our top priority. Our experts are ready to assist you in creating and maintaining the garden of your dreams. Use the contact form below or reach us directly with the details listed.
+  </p>
+
+  <h3>Get in Touch</h3>
+  <form action="#" method="post" aria-label="Contact form">
+    <label for="name">Full Name <span aria-hidden="true" style="color: #b33a3a;">*</span></label>
+    <input type="text" id="name" name="name" placeholder="Your name" required />
+
+    <label for="email">Email Address <span aria-hidden="true" style="color: #b33a3a;">*</span></label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="+1 (234) 567-890" />
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Brief subject of your message" />
+
+    <label for="message">Your Message <span aria-hidden="true" style="color: #b33a3a;">*</span></label>
+    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <section class="contact-info" aria-label="Company contact information and business hours">
+    <h3>Our Contact Information</h3>
+    <p><strong>Phone:</strong> <a href="tel:+18662339988" style="color: var(--accent-color); text-decoration: underline;">+1 (866) 233-9988</a></p>
+    <p><strong>Email:</strong> <a href="mailto:contact@greenscape.com" style="color: var(--accent-color); text-decoration: underline;">contact@greenscape.com</a></p>
+    <p><strong>Address:</strong> 239 Greene St, New York, NY 10003, USA</p>
+
+    <h3>Business Hours</h3>
+    <ul class="hours-list">
+      <li>Monday - Friday: 8:00 AM – 6:00 PM</li>
+      <li>Saturday: 9:00 AM – 4:00 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+
+    <h3>Tips for Contacting Us</h3>
+    <p>
+      To help us serve you better, please provide as much detail as possible in your message, including:
+    </p>
+    <ul>
+      <li>Type of gardening service you are interested in</li>
+      <li>Size and location of your garden</li>
+      <li>Preferred dates or scheduling needs</li>
+      <li>Any special requirements or questions</li>
+    </ul>
+    <p>
+      This information allows us to prepare and provide you with the most accurate advice and quotations.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 GreenScape Gardening Services. All rights reserved.</p>
+  <p>Phone: <a href="tel:+18662339988" style="color: #adebad; text-decoration: underline;">+1 (866) 233-9988</a> | Email: <a href="mailto:contact@greenscape.com" style="color: #adebad; text-decoration: underline;">contact@greenscape.com</a></p>
+  <p>Address: 239 Greene St, New York, NY 10003, USA</p>
+</footer>
+</body>
+</html>
